@@ -4,6 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const User = require("./models/User");
 const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/user");
 
 const app = express();
 
@@ -32,3 +33,4 @@ app.listen(PORT, () => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api", userRoutes);
